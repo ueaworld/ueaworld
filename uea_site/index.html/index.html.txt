@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>UEA</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.top-text {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  color: #FFD700;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.main {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.yellow {
+  color: #FFD700;
+}
+
+.words span {
+  display: none;
+  font-size: 28px;
+  margin-left: 10px;
+}
+</style>
+
+</head>
+
+<body onclick="goNext()">
+
+<div class="top-text">WELCOME TO UEA</div>
+
+<div class="container">
+  <div class="main">
+    <span class="yellow">SMDV</span>
+    <span class="words">
+      <span>Shutter</span>
+      <span>MC</span>
+      <span>Different</span>
+      <span>Vision</span>
+    </span>
+  </div>
+</div>
+
+<script>
+const words = document.querySelectorAll(".words span");
+let index = 0;
+
+function showWord() {
+  words.forEach(w => w.style.display = "none");
+  words[index].style.display = "inline";
+  index = (index + 1) % words.length;
+}
+
+setInterval(showWord, 1000);
+showWord();
+
+// 자동 이동 (4초)
+setTimeout(() => {
+  window.location.href = "main.html";
+}, 4000);
+
+// 클릭 이동
+function goNext(){
+  window.location.href = "main.html";
+}
+</script>
+
+</body>
+</html>
