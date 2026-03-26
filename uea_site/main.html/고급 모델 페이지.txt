@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SMDV</title>
+
+<style>
+body {
+  margin:0;
+  background:black;
+  color:white;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.header {
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:30px 50px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.logo {
+  color:#FFD700;
+  letter-spacing:5px;
+}
+
+.section {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero {
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:60px;
+  color:#FFD700;
+}
+
+.image-section img {
+  width:70%;
+  transition:0.5s;
+}
+
+.image-section img:hover {
+  transform:scale(1.05);
+}
+
+.booking a {
+  color:#FFD700;
+  font-size:24px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">SMDV</div>
+</div>
+
+<div class="section hero">
+  <h1>MODEL NAME</h1>
+</div>
+
+<div class="section image-section">
+  <img src="img1.jpg">
+</div>
+
+<div class="section image-section">
+  <img src="img2.jpg">
+</div>
+
+<div class="section image-section">
+  <img src="img3.jpg">
+</div>
+
+<div class="section booking">
+  <a href="https://open.kakao.com">BOOKING / CONTACT</a>
+</div>
+
+</body>
+</html>
